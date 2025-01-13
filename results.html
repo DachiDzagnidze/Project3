@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .result-container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .result-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .result-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Your IQ Result</h1>
+        <img id="resultImage" src="" alt="IQ Result">
+        <p id="scoreText"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve stored answers from local storage
+            const answers1Q = JSON.parse(localStorage.getItem('quizAnswers1Q')) || [];
+            const answers2Q = JSON.parse(localStorage.getItem('quizAnswers2Q')) || [];
+            
+            // Combine answers from both quizzes
+            const allAnswers = answers1Q.concat(answers2Q);
+            const correctAnswers = allAnswers.filter(answer => answer).length;
+
+            // Display the IQ result image and score text
+            const resultImage = document.getElementById('resultImage');
+            const scoreText = document.getElementById('scoreText');
+
+            if (correctAnswers >= 18) {
+                resultImage.src = '/images/high-IQ.png';
+                scoreText.textContent = `Congratulations! You scored ${correctAnswers} out of ${allAnswers.length}. You have a high IQ!`;
+            } else if (correctAnswers >= 10) {
+                resultImage.src = '/images/average-IQ.png';
+                scoreText.textContent = `Good job! You scored ${correctAnswers} out of ${allAnswers.length}. You have an average IQ.`;
+            } else {
+                resultImage.src = '/images/low-IQ.png';
+                scoreText.textContent = `You scored ${correctAnswers} out of ${allAnswers.length}. Keep practicing!`;
+            }
+        });
+    </script>
+</body>
+</html>

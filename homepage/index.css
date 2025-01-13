@@ -1,0 +1,212 @@
+body {
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(306deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(274deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(389deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(518deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(535deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(329deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(612deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(578deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(355deg, rgb(30,94,98),rgb(47,144,149));
+  }
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #3fc1c9;
+}
+.logo img{
+    width: 200px;
+}
+.mainWrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    animation: startupPage 0.7s;
+    position: absolute;
+    width: 100%;
+}
+#blueText{
+    color: #3fc1c9;
+}
+.leftMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.text1 h1{
+    line-height: 2;
+    font-size: 60px;
+}
+.text2 h5{
+    font-size: 20px;
+    font-weight: 50;
+}
+.startBtn button{
+    border: none;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #3fc1c9;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #222831;
+    transition: 0.3s ease;
+}
+.startBtn button a{
+    text-decoration: none;
+    color: #222831;
+}
+.startBtn button:hover{
+    transform: scale(1.05);
+}
+.rightMain img{
+    width: 100%;
+    animation: imgOpPulse 3s infinite;
+}
+.footerimg{
+    margin-top: 685px;
+    
+}
+.footerimg img{
+    width: 100%;
+}
+
+
+
+
+
+@keyframes imgOpPulse{
+    0%, 100%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 50%;
+    }
+}
+
+@keyframes startupPage{
+    0%{
+        margin-top: 260px;
+        opacity: 0%;
+    }
+    20%{
+        opacity: 20%;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 100%;
+    }
+}
+@media(max-width:1114px){
+    .rightMain{
+        width: 45%;
+    }
+}
+@media(max-width:981px){
+    .rightMain{
+        width: 44%;
+    }
+}
+
+@media (max-width: 976px) {
+    .leftMain{
+        width: 56%;
+    }
+    .rightMain{
+        width: 44%;
+    }
+}
+@media(max-width:963px){
+    .leftMain{
+        width: 57%;
+    }
+    .rightMain{
+        width: 43%;
+    }
+}
+@media (max-width:946px){
+    .leftMain{
+        width: 60%;
+    }
+    .rightMain{
+        width: 40%;
+    }
+}
+@media (max-width:900px){
+    .leftMain{
+        width: 70%;
+    }
+    .rightMain{
+        width: 50%;
+    }
+    .mainWrap{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .text1{
+        text-align: center;
+    }
+    .text2{
+        text-align: center;
+    }
+    .startBtn{
+        text-align: center;
+    }
+    .footerimg{
+        margin-top: 950px;
+    }
+}
+@media(max-width:770px){
+    .footerimg{
+        margin-top: 820px;
+    }
+    .text1 h1{
+        line-height: 2;
+        font-size: 40px;
+    }
+    .text2 h5{
+        font-size: 20px;
+        font-weight: 50;
+    }
+}
+@media(max-width:650px){
+    .footerimg{
+        margin-top: 700px;
+    }
+}
+@media(max-width:700px){
+    .footerimg{
+        margin-top: 720px;
+    }
+}
+@media(max-width:513px){
+    .text1 h1{
+        line-height: 2;
+        font-size: 35px;
+    }
+    .footerimg{
+        margin-top:705px;
+    }
+}
+@media (max-width:497px){
+    .startBtn button{
+        width: 70%;
+    }
+}
+@media (max-width:449px){
+    .leftMain {
+        width: 95%;
+    }
+    .footerimg{
+        margin-top:730px;
+    }
+}
+@media (max-width:335px){
+    .leftMain {
+        width: 100%;
+    }
+}
