@@ -6,49 +6,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>IQ test</title>
+    <title>IQ Test</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/1Q/style.css">
 </head>
 <body>
     <header>
-        <div class="logo"><a href="/homepage/index.html"><img src="/quizBefore/forImages/logo.png" width=></a></div>
+        <div class="logo">
+            <a href="/homepage/index.html">
+                <img src="/quizBefore/forImages/logo.png" width="200" alt="Logo">
+            </a>
+        </div>
     </header>
     <main>
-    <div class="mainWrap">
-        <div class="mainbox">
-            <div class="timerContainer">
-                <div id="timer" class="timer">20:00</div>
-            </div>
-            <div class="upper">
-                <div class="question">
-                    <img src="./08-question quize img/Q8.png">
+        <div class="mainWrap">
+            <div class="mainbox">
+                <div class="timerContainer">
+                    <div id="timer" class="timer">20:00</div>
                 </div>
-                <div class="answers">
-                    <div class="line1">
-                        <div class="answer" id="ans1"><img src="./08-question quize img/Q8-01t.png"></div>
-                        <div class="answer" id="ans2"><img src="./08-question quize img/Q8-02.png"></div>
-                        <div class="answer" id="ans3"><img src="./08-question quize img/Q8-03.png"></div>
+                <div class="upper">
+                    <div class="question">
+                        <img id="questionImage" src="./08-question quize img/Q8.png" alt="Question">
                     </div>
-                    <div class="line2">
-                        <div class="answer" id="ans4"><img src="./08-question quize img/Q8-04.png"></div>
-                        <div class="answer" id="ans5"><img src="./08-question quize img/Q8-05.png"></div>
-                        <div class="answer" id="ans6"><img src="./08-question quize img/Q8.png"></div>
+                    <div class="answers">
+                        <div class="line1">
+                            <div class="answer" id="ans1"><img src="./08-question quize img/Q8-01t.png" alt="Answer 1"></div>
+                            <div class="answer" id="ans2"><img src="./08-question quize img/Q8-02.png" alt="Answer 2"></div>
+                            <div class="answer" id="ans3"><img src="./08-question quize img/Q8-03.png" alt="Answer 3"></div>
+                        </div>
+                        <div class="line2">
+                            <div class="answer" id="ans4"><img src="./08-question quize img/Q8-04.png" alt="Answer 4"></div>
+                            <div class="answer" id="ans5"><img src="./08-question quize img/Q8-05.png" alt="Answer 5"></div>
+                            <div class="answer" id="ans6"><img src="./08-question quize img/Q8.png" alt="Answer 6"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lower">
-                <div class="foot">
-                    <button class="Bbutton"><i class='bx bx-left-arrow-circle' ></i><a href="/7Q/index.html">Back</a></button>
-                    <div class="score">
-                        <span>1</span><span>/</span><span>20</span>
+                <div class="lower">
+                    <div class="foot">
+                        <button class="Bbutton">
+                            <i class='bx bx-left-arrow-circle'></i>
+                            <a href="/7Q/index.html">Back</a>
+                        </button>
+                        <div class="score">
+                            <span>8</span><span>/</span><span>20</span>
+                        </div>
+                        <button class="submitButton">Submit <i class='bx bx-right-arrow-circle'></i></button>
+                        <button class="nextButton" style="display: none;">Next <i class='bx bx-right-arrow-circle'></i></button>
                     </div>
-                    <button class="submitButton">Submit <i class='bx bx-right-arrow-circle'></i></button>
-                    <button class="nextButton" style="display: none;">Next <i class='bx bx-right-arrow-circle'></i></button>
                 </div>
             </div>
         </div>
-    </div>
     </main>
     <script src="script.js"></script>
 </body>

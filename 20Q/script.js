@@ -16,7 +16,7 @@ const questions = [
         ],
         correctAnswerIndex: 2
     },
-    // Add more questions here
+    // Add more questions here as needed
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

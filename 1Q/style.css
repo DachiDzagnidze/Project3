@@ -237,9 +237,23 @@ span {
     transition: 0.2s ease;
 }
 
+/* Adjust submit and next button styles */
 .submitButton, .nextButton {
-    display: none;
+    display: none; /* Ensure they start hidden */
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: e3e3e3;
+    border-radius: 50px;
 }
+
+.submitButton {
+    display: block; 
+}
+
+.nextButton:hover, .submitButton:hover {
+    background-color: #31a5a0;
+}
+
 
 .Bbutton {
     font-size: 20px;

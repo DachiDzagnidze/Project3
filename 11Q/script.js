@@ -2,6 +2,7 @@ let currentQuestionIndex = 0;
 let answers = [];
 let timeRemaining = 20 * 60; // 20 minutes in seconds
 let timerInterval;
+
 const questions = [
     {
         question: "What is 2 + 2?", 
@@ -16,7 +17,7 @@ const questions = [
         ],
         correctAnswerIndex: 4
     },
-    // Add more questions here
+    // Add more questions here as necessary
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,9 +47,9 @@ function displayQuestion() {
         const question = questions[currentQuestionIndex];
         // Set the question image dynamically
         document.querySelector("#questionImage").src = question.image;
-        
+
         const answerImages = document.querySelectorAll(".answer img");
-        
+
         answerImages.forEach((img, index) => {
             img.src = question.options[index]; // Set option images dynamically
             img.setAttribute("data-index", index); // Set data-index for easier reference
@@ -67,7 +68,7 @@ document.querySelectorAll(".answer img").forEach(img => {
     img.addEventListener("click", () => {
         // Deselect any previously selected image
         document.querySelectorAll(".answer").forEach(el => el.classList.remove("selected"));
-        
+
         // Add selected class to clicked image
         img.parentElement.classList.add("selected");
     });
@@ -75,11 +76,11 @@ document.querySelectorAll(".answer img").forEach(img => {
 
 function submitAnswer() {
     const selectedAnswer = document.querySelector(".answers .selected");
-    
+
     if (selectedAnswer) {
         const selectedAnswerIndex = parseInt(selectedAnswer.querySelector("img").getAttribute("data-index"));
         const correctAnswerIndex = questions[currentQuestionIndex].correctAnswerIndex;
-        
+
         // Mark the selected answer (correct/incorrect) with animations
         const answerElements = document.querySelectorAll(".answer");
         answerElements.forEach((el, index) => {
@@ -94,7 +95,7 @@ function submitAnswer() {
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
         localStorage.setItem('quizAnswers2Q', JSON.stringify(answers)); // Store answers in local storage
-        
+
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";
         document.querySelector(".nextButton").style.display = "block";

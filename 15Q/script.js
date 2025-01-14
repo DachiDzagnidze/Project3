@@ -2,17 +2,18 @@ let currentQuestionIndex = 0;
 let answers = [];
 let timeRemaining = 20 * 60; // 20 minutes in seconds
 let timerInterval;
+
 const questions = [
     {
         question: "What is 2 + 2?", 
-        image: "/15Q/15-question quize img/Q15.png", 
+        image: "./15-question quize img/Q15.png", 
         options: [
-            "/15Q/15-question quize img/Q15-01.png", 
-            "/15Q/15-question quize img/Q15-02t.png", 
-            "/15Q/15-question quize img/Q15-03.png", 
-            "/15Q/15-question quize img/Q15-04.png", 
-            "/15Q/15-question quize img/Q15-05.png", 
-            "/15Q/15-question quize img/Q15-06.png"
+            "./15-question quize img/Q15-01.png", 
+            "./15-question quize img/Q15-02t.png", 
+            "./15-question quize img/Q15-03.png", 
+            "./15-question quize img/Q15-04.png", 
+            "./15-question quize img/Q15-05.png", 
+            "./15-question quize img/Q15-06.png"
         ],
         correctAnswerIndex: 1
     },

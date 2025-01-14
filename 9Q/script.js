@@ -16,7 +16,7 @@ const questions = [
         ],
         correctAnswerIndex: 3
     },
-    // Add more questions here
+    // More questions can be added here
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,7 +93,7 @@ function submitAnswer() {
 
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
-        localStorage.setItem('quizAnswers2Q', JSON.stringify(answers)); // Store answers in local storage
+        localStorage.setItem('quizAnswers9Q', JSON.stringify(answers)); // Store answers in local storage
         
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";

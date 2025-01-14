@@ -1,18 +1,19 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 2 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; // 2 minutes in seconds
 let timerInterval;
+
 const questions = [
     {
         question: "What is 2 + 2?", 
         image: "/4Q/04-question quize img/Q4.png", 
         options: [
-            "/4Q/4-question quize img/Q4-01.png", 
-            "/4Q/4-question quize img/Q4-02.png", 
-            "/4Q/4-question quize img/Q4-03.png", 
-            "/4Q/4-question quize img/Q4-04t.png", 
-            "/4Q/4-question quize img/Q4-05.png", 
-            "/4Q/4-question quize img/Q4-06.png"
+            "/4Q/04-question quize img/Q4-01.png", 
+            "/4Q/04-question quize img/Q4-02.png", 
+            "/4Q/04-question quize img/Q4-03.png", 
+            "/4Q/04-question quize img/Q4-04t.png", 
+            "/4Q/04-question quize img/Q4-05.png", 
+            "/4Q/04-question quize img/Q4-06.png"
         ],
         correctAnswerIndex: 3
     },
@@ -93,7 +94,7 @@ function submitAnswer() {
 
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
-        localStorage.setItem('quizAnswers1Q', JSON.stringify(answers)); // Store answers in local storage
+        localStorage.setItem('quizAnswers4Q', JSON.stringify(answers)); // Store answers in local storage
         
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";
@@ -109,8 +110,8 @@ function nextQuestion() {
         displayQuestion();
     } else {
         endQuiz();
-        // Redirect to the next quiz page (2Q folder)
-        window.location.href = "/5Q/index.html"; // Redirects to 2Q folder index.html
+        // Redirect to the next quiz page (5Q folder)
+        window.location.href = "/5Q/index.html"; // Redirects to 5Q folder index.html
     }
 }
 

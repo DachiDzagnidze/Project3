@@ -2,6 +2,7 @@ let currentQuestionIndex = 0;
 let answers = [];
 let timeRemaining = 20 * 60; // 20 minutes in seconds
 let timerInterval;
+
 const questions = [
     {
         question: "What is 2 + 2?", 

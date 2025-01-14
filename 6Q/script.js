@@ -8,13 +8,13 @@ const questions = [
         image: "/6Q/06-question quize img/Q6.png", 
         options: [
             "/6Q/06-question quize img/Q6-01.png", 
-            "/6Q/06-question quize img/Q6-02t.png", 
+            "/6Q/06-question quize img/Q6-02.png", 
             "/6Q/06-question quize img/Q6-03.png", 
             "/6Q/06-question quize img/Q6-04.png", 
             "/6Q/06-question quize img/Q6-05t.png", 
             "/6Q/06-question quize img/Q6-06.png"
         ],
-        correctAnswerIndex: 1
+        correctAnswerIndex: 4
     },
     // Add more questions here
 ];

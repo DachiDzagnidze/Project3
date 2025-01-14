@@ -5,14 +5,14 @@ let timerInterval;
 const questions = [
     {
         question: "What is 2 + 2?", 
-        image: "/13Q/13-question quize img/13.png", 
+        image: "./13-question quize img/Q13.png", 
         options: [
-            "/13Q/13-question quize img/Q13-01.png", 
-            "/13Q/13-question quize img/Q13-02.png", 
-            "/13Q/13-question quize img/Q13-03.png", 
-            "/13Q/13-question quize img/Q13-04.png", 
-            "/13Q/13-question quize img/Q13-05t.png", 
-            "/13Q/13-question quize img/Q13-06.png"
+            "./13-question quize img/Q13-01.png", 
+            "./13-question quize img/Q13-02.png", 
+            "./13-question quize img/Q13-03.png", 
+            "./13-question quize img/Q13-04.png", 
+            "./13-question quize img/Q13-05t.png", 
+            "./13-question quize img/Q13-06.png"
         ],
         correctAnswerIndex: 4
     },
@@ -44,6 +44,7 @@ function startTimer() {
 function displayQuestion() {
     if (currentQuestionIndex < questions.length) {
         const question = questions[currentQuestionIndex];
+        
         // Set the question image dynamically
         document.querySelector("#questionImage").src = question.image;
         
