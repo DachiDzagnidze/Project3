@@ -1,10 +1,9 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
 const questions = [
     {
-        question: "What is 2 + 2?", 
         image: "/3Q/03-question quize img/Q3.png", 
         options: [
             "/3Q/03-question quize img/Q3-01.png", 
@@ -26,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".nextButton").addEventListener("click", nextQuestion);
 });
 
+
 function startTimer() {
     timerInterval = setInterval(() => {
         timeRemaining--;
@@ -35,6 +35,10 @@ function startTimer() {
 
         if (timeRemaining <= 0) {
             clearInterval(timerInterval);
+            if (!hasSubmittedAnswer) {
+                alert("Time's up! You didn't submit an answer.");
+                window.location.href = "/homepage/index.html"; // Redirect to homepage if no answer was submitted
+            }
             document.querySelector(".nextButton").disabled = true; // Disable Next button
             endQuiz();
         }

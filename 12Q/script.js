@@ -1,10 +1,9 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
 const questions = [
     {
-        question: "What is 2 + 2?", 
         image: "/12Q/12-question quize img/Q12.png", 
         options: [
             "/12Q/12-question quize img/Q12-01t.png", 

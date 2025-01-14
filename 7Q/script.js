@@ -1,6 +1,6 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
 
 const questions = [

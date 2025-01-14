@@ -1,10 +1,11 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
+let hasSubmittedAnswer = false; 
+
 const questions = [
     {
-        question: "What is 2 + 2?", 
         image: "/2Q/02-question quize img/Q2.png", 
         options: [
             "/2Q/02-question quize img/Q2-01.png", 
@@ -35,6 +36,10 @@ function startTimer() {
 
         if (timeRemaining <= 0) {
             clearInterval(timerInterval);
+            if (!hasSubmittedAnswer) {
+                alert("Time's up! You didn't submit an answer.");
+                window.location.href = "/homepage/index.html"; // Redirect to homepage if no answer was submitted
+            }
             document.querySelector(".nextButton").disabled = true; // Disable Next button
             endQuiz();
         }
@@ -75,11 +80,12 @@ document.querySelectorAll(".answer img").forEach(img => {
 
 function submitAnswer() {
     const selectedAnswer = document.querySelector(".answers .selected");
-    
+
     if (selectedAnswer) {
+        hasSubmittedAnswer = true; // Mark as submitted
         const selectedAnswerIndex = parseInt(selectedAnswer.querySelector("img").getAttribute("data-index"));
         const correctAnswerIndex = questions[currentQuestionIndex].correctAnswerIndex;
-        
+
         // Mark the selected answer (correct/incorrect) with animations
         const answerElements = document.querySelectorAll(".answer");
         answerElements.forEach((el, index) => {
@@ -94,7 +100,7 @@ function submitAnswer() {
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
         localStorage.setItem('quizAnswers2Q', JSON.stringify(answers)); // Store answers in local storage
-        
+
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";
         document.querySelector(".nextButton").style.display = "block";
@@ -109,8 +115,8 @@ function nextQuestion() {
         displayQuestion();
     } else {
         endQuiz();
-        // Redirect to the next quiz page (2Q folder)
-        window.location.href = "/3Q/index.html"; // Redirects to 2Q folder index.html
+        // Redirect to the next quiz page (3Q folder)
+        window.location.href = "/3Q/index.html"; // Redirects to 3Q folder index.html
     }
 }
 
@@ -118,28 +124,4 @@ function endQuiz() {
     // Disable interactions after quiz completion
     document.querySelector(".nextButton").disabled = true;
     document.querySelector(".submitButton").disabled = true;
-
-    // Calculate the IQ score based on answers
-    let score = answers.filter(answer => answer).length; // Count correct answers
-
-    // Display IQ result with images
-    const resultImage = document.createElement("img");
-    resultImage.src = getIQImage(score);
-    resultImage.alt = "IQ Result";
-    resultImage.style.width = "100%"; // Adjust size as needed
-    const resultContainer = document.createElement("div");
-    resultContainer.classList.add("result-container");
-    resultContainer.appendChild(resultImage);
-    document.querySelector(".mainbox").innerHTML = '';
-    document.querySelector(".mainbox").appendChild(resultContainer);
-}
-
-function getIQImage(score) {
-    if (score >= 18) {
-        return '/images/high-IQ.png';
-    } else if (score >= 10) {
-        return '/images/average-IQ.png';
-    } else {
-        return '/images/low-IQ.png';
-    }
 }

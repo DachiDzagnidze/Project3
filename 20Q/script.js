@@ -1,10 +1,9 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; // 20 minutes in seconds
 let timerInterval;
 const questions = [
     {
-        question: "What is 2 + 2?", 
         image: "/20Q/20-question quize img/Q20.png", 
         options: [
             "/20Q/20-question quize img/Q20-01.png", 
@@ -110,7 +109,7 @@ function nextQuestion() {
     } else {
         endQuiz();
         // Redirect to the next quiz page (e.g., results page or another quiz)
-        window.location.href = "/results.html"; // Update to the appropriate path
+        window.location.href = "/quizesFinish/results.html"; // Update to the appropriate path
     }
 }
 

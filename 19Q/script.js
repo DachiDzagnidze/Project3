@@ -1,12 +1,11 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
 
 const questions = [
     {
-        question: "What is 2 + 2?", 
-        image: "/10Q/10-question quize img/Q10.png", 
+        image: "/19Q/19-question quize img/Q19.png", 
         options: [
             "/19Q/19-question quize img/Q19-01.png", 
             "/19Q/19-question quize img/Q19-02.png", 
@@ -94,7 +93,7 @@ function submitAnswer() {
 
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
-        localStorage.setItem('quizAnswers2Q', JSON.stringify(answers)); // Store answers in local storage
+        localStorage.setItem('quizAnswers19Q', JSON.stringify(answers)); // Store answers in local storage
         
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";
@@ -111,7 +110,7 @@ function nextQuestion() {
     } else {
         endQuiz();
         // Redirect to the next quiz page (e.g., results page or another quiz)
-        window.location.href = "/19Q/index.html"; // Update to the appropriate path
+        window.location.href = "/20Q/index.html"; // Update to the appropriate path
     }
 }
 

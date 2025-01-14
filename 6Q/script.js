@@ -1,10 +1,9 @@
 let currentQuestionIndex = 0;
 let answers = [];
-let timeRemaining = 20 * 60; // 20 minutes in seconds
+let timeRemaining = 2 * 60; 
 let timerInterval;
 const questions = [
     {
-        question: "What is 2 + 2?", 
         image: "/6Q/06-question quize img/Q6.png", 
         options: [
             "/6Q/06-question quize img/Q6-01.png", 
@@ -16,7 +15,7 @@ const questions = [
         ],
         correctAnswerIndex: 4
     },
-    // Add more questions here
+    
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
