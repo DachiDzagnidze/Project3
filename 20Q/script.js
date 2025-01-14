@@ -93,7 +93,7 @@ function submitAnswer() {
 
         // Store the selected answer (correct/incorrect)
         answers.push(selectedAnswerIndex === correctAnswerIndex);
-        localStorage.setItem('quizAnswers2Q', JSON.stringify(answers)); // Store answers in local storage
+        localStorage.setItem('quizAnswers20Q', JSON.stringify(answers)); // Store answers in local storage
         
         // Hide submit button and show next button
         document.querySelector(".submitButton").style.display = "none";

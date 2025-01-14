@@ -111,7 +111,7 @@ function nextQuestion() {
     } else {
         endQuiz();
         // Redirect to the next quiz page (e.g., results page or another quiz)
-        window.location.href = "/16Q/index.html"; // Update to the appropriate path
+        window.location.href = "/15Q/index.html"; // Update to the appropriate path
     }
 }
 
